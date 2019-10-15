@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>首页</title>
+    <title>一级分类</title>
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.css">
     <link rel="stylesheet" href="./css/index.css">
@@ -14,26 +14,26 @@
 </head>
 <body>
 <!--    公共侧边栏-->
-    <div class="lt-aside">
-        <div class="lt-aside-top">
-            <a href="index.html">乐淘商城</a>
-        </div>
-        <div class="lt-aside-middle">
-            <img src="./images/eldos.jpg" alt="">
-            <p>超级管理员</p>
-        </div>
-        <div class="lt-aside-bottom">
-            <ul>
-                <li><a href="user.html"><i class="glyphicon glyphicon-user"></i> <span>用户管理</span></a></li>
-                <li><a href="javascript:;" class="cate-father"><i class="glyphicon glyphicon-list"></i> <span>分类管理</span></a></li>
-                <div class="cate-children" style="display: none">
-                    <a href="first.html">一级分类</a>
-                    <a href="second.html">二级分类</a>
-                </div>
-                <li><a href="product.html"><i class="glyphicon glyphicon-tags"></i> <span>商品管理</span></a></li>
-            </ul>
-        </div>
+<div class="lt-aside">
+    <div class="lt-aside-top">
+        <a href="index.html">乐淘商城</a>
     </div>
+    <div class="lt-aside-middle">
+        <img src="./images/eldos.jpg" alt="">
+        <p>超级管理员</p>
+    </div>
+    <div class="lt-aside-bottom">
+        <ul>
+            <li><a href="user.html"><i class="glyphicon glyphicon-user"></i> <span>用户管理</span></a></li>
+            <li><a href="javascript:;" class="cate-father"><i class="glyphicon glyphicon-list"></i> <span>分类管理</span></a></li>
+            <div class="cate-children" style="display: block">
+                <a href="first.html" class="current">一级分类</a>
+                <a href="second.html">二级分类</a>
+            </div>
+            <li><a href="product.html"><i class="glyphicon glyphicon-tags"></i> <span>商品管理</span></a></li>
+        </ul>
+    </div>
+</div>
 
 <!--顶部导航-->
 <div class="lt-topbar">
@@ -46,14 +46,9 @@
     <div class="container-fluid">
         <ol class="breadcrumb">
             <li><a href="index.html">管理系统</a></li>
-            <li class="active">首页</li>
+            <li class="active">分类管理</li>
+            <li class="active">一级分类</li>
         </ol>
-
-<!--        ecahrts============-->
-        <div class="lt-echart">
-            <div class="echart-1 pull-left"></div>
-            <div class="echart-2 pull-right"></div>
-        </div>
     </div>
 </div>
 
@@ -81,8 +76,6 @@
 <script src="lib/bootstrap/js/bootstrap.js"></script>
 <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
 <script src="lib/nprogress/nprogress.js"></script>
-<script src="lib/echarts/echarts.common.min.js"></script>
 <script src="js/common.js"></script>
-<script src="js/index.js"></script>
 </body>
 </html>

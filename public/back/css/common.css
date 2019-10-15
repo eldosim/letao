@@ -2,6 +2,133 @@
     background-color: #222D32;
 }
 
+
 .mg-150{
     margin-top: 150px;
 }
+
+*{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+.red {
+    color: #A94442;
+}
+
+.lt-aside.my-hidden{
+    left: -180px;
+}
+.lt-aside{
+    z-index: 998;
+    position: fixed;
+    left: 0;
+    top:0;
+    background-color: #222D32;
+    width: 180px;
+    height: 100%;
+    transition: all 1s;
+}
+
+.lt-aside .lt-aside-top{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #367FA9;
+    text-align: center;
+}
+
+.lt-aside .lt-aside-top a{
+    font-size: 26px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.lt-aside .lt-aside-middle{
+    height: 180px;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.lt-aside .lt-aside-middle img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.lt-aside .lt-aside-middle p{
+    padding-top: 10px;
+    font-size: 18px;
+    color: #fff;
+}
+
+
+.lt-aside .lt-aside-bottom li{
+    font-size: 14px;
+
+}
+.lt-aside .lt-aside-bottom a{
+    padding-left:40px;
+    line-height: 38px;
+
+    display: block;
+    border-left: 3px solid transparent;
+    text-decoration: none;
+    color:#fff;
+
+}
+.lt-aside .lt-aside-bottom .cate-children a{
+    padding-left: 60px;
+
+}
+.lt-aside .lt-aside-bottom a.current{
+    border-left: 3px solid #006699;
+    background-color: #1D1F21;
+}
+.lt-topbar.my-hidden{
+    padding-left: 0;
+}
+.lt-topbar{
+    height: 50px;
+    width: 100%;
+    background-color: #3C8DBC;
+    color: #fff;
+    padding-left: 180px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: all 1s;
+}
+.lt-topbar a{
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+
+}
+.lt-topbar a:hover,
+.lt-topbar a:visited{
+    color: #fff;
+}
+.lt-main.my-hidden{
+    padding-left: 0;
+}
+
+.lt-main{
+    width: 100%;
+    height: 1000px;
+    padding-left: 180px;
+    padding-top: 50px;
+    transition: all 1s;
+
+}
+.breadcrumb a:hover{
+    text-decoration: none;
+}
+.breadcrumb{
+    margin-top:20px;
+}
+

@@ -1,0 +1,10 @@
+
+.lt-echart{
+    width: 100%;
+}
+
+.lt-echart .echart-1,
+.lt-echart .echart-2{
+    width: 48%;
+    height: 400px;
+}
