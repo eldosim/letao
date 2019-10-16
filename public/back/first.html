@@ -49,8 +49,36 @@
             <li class="active">分类管理</li>
             <li class="active">一级分类</li>
         </ol>
+
+
+        <button class="btn btn-default mb_20" id="addBtn">添加分类</button>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th width="20%">序号</th>
+                    <th width="80%">一级分类名</th>
+                </tr>
+            </thead>
+            <tbody>
+<!--                <tr>-->
+<!--                    <td>1</td>-->
+<!--                    <td>户外官</td>-->
+<!--                </tr>-->
+            </tbody>
+        </table>
+        <div class="text-right">
+            <ul id="paginator"></ul>
+        </div>
     </div>
 </div>
+<script type="text/html" id="firstTpl">
+    {{each rows v i}}
+    <tr>
+        <td>{{i+1+(page-1)*size}}</td>
+        <td>{{v.categoryName}}</td>
+    </tr>
+    {{/each}}
+</script>
 
 <div class="modal fade" id="logoutmodal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
@@ -70,12 +98,40 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<!--&lt;!&ndash; 启用禁用模态框 &ndash;&gt;主使用==========================================-->
+<div class="modal fade" id="firstModal">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h4 class="modal-title">添加分类</h4>
+            </div>
+            <form id="form">
+            <div class="modal-body">
+<!--               ==================================================================-->
 
+                    <div class="form-group">
+                        <input type="text" name="categoryName" class="form-control" id="exampleInputEmail1" placeholder="请输入一级分类">
+                    </div>
+
+<!--             ======================================================================-->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default modalcancelbtn" data-dismiss="modal">取消</button>
+                <button type="submit" class="btn btn-primary" id="addmodalbtn">添加</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 <script src="lib/jquery/jquery.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.js"></script>
 <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
 <script src="lib/nprogress/nprogress.js"></script>
 <script src="js/common.js"></script>
+<script src="./js/first.js"></script>
 </body>
 </html>
