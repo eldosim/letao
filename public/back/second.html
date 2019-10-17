@@ -123,17 +123,20 @@
             <form id="form">
                 <div class="modal-body">
                     <!--               ==================================================================-->
-                    <div class="dropdown mb_20">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                            <span id="selecttext">请选择一级分类</span>
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" id="dropdown-first">
-<!--                            <li><a href="#">Action</a></li>-->
-                        </ul>
+                    <div class="form-group">
+                        <div class="dropdown mb_20">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                                <span id="selecttext">请选择一级分类</span>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" id="dropdown-first">
+<!--                                <li><a href="#">Action</a></li>-->
+                            </ul>
+                            <input type="hidden" name="categoryId">
+                        </div>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="categoryName" class="form-control" id="exampleInputEmail1" placeholder="请输入二级分类">
+                        <input type="text" name="brandName" class="form-control" id="exampleInputEmail1" placeholder="请输入二级分类">
                     </div>
                     <div class="form-group">
                         <label for="fileupload"class="btn btn-default mb_20" id="uploadpic">
@@ -141,7 +144,7 @@
                         </label>
                         <input type="file" id="fileupload" name="pic1" data-url="/category/addSecondCategoryPic" style="display: none;">
                         <div id="picture"><img src="images/none.png" width="100px" alt=""></div>
-
+                        <input type="hidden" name="brandLogo">
                     </div>
 
 
@@ -151,6 +154,7 @@
                     <button type="button" class="btn btn-default modalcancelbtn" data-dismiss="modal">取消</button>
                     <button type="submit" class="btn btn-primary" id="addmodalbtn">添加</button>
                 </div>
+                <input type="hidden" name="hot" value="1">
             </form>
         </div>
     </div>
@@ -158,7 +162,7 @@
 
 <script type="text/html" id="modalfirsttpl">
     {{each rows v i}}
-    <li><a href="#">{{v.categoryName}}</a></li>
+    <li><a href="#" data-id="{{v.id}}">{{v.categoryName}}</a></li>
     {{/each}}
 </script>
 <script src="lib/jquery/jquery.min.js"></script>
